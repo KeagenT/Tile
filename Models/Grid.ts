@@ -1,4 +1,5 @@
 import { Position } from "./Position.ts";
+import { HoleTile, Tile, Tiles } from "./Tile.ts";
 
 class Grid<T> {
     private _grid: T[][];
@@ -39,5 +40,15 @@ class Grid<T> {
             return false;
         }
         return true
+    }
+}
+
+export class TileGrid extends Grid<Tile> {
+    constructor(width: number, height: number) {
+        super(width, height, new HoleTile());
+    }
+
+    public toString(): string {
+        return this.grid().map(row => row.map(tile => tile.toString()).join('')).join('\n');
     }
 }

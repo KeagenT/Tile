@@ -1,14 +1,12 @@
-import { Position } from "./Models/Position.ts";
-import { Tile } from "./Models/Tile.ts";
+import { TileGrid } from "./Models/Grid.ts";
 
 export function add(a: number, b: number): number {
   return a + b;
 }
 
-// Learn more at https://deno.land/manual/examples/module_metadata#concepts
+// Learn more at https://docs.deno.com/runtime/manual/examples/module_metadata#concepts
 if (import.meta.main) {
-  console.log("Add 2 + 3 =", add(2, 3));
-}
+  const map = new TileGrid(5, 5);
+  console.log(map.toString());
 
-console.log(3..toString(2));
-console.log(`${new Tile({bitmask: 4})}`);
+}
