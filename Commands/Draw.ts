@@ -1,9 +1,5 @@
-import { TileGrid } from "../Models/Grid.ts";
-import { Position } from "../Models/Position.ts";
-import { Tile } from "../Models/Tile.ts";
-import { UpdateTileBitmaskCommand } from "./Bitmask.ts";
-import { Command } from "./Command.ts";
-import { SetTileCommand } from "./SetTile.ts";
+import { Tile, Position, TileGrid } from "../Models/mod.ts";
+import { Command, SetTileCommand, UpdateTileBitmaskCommand } from "./mod.ts";
 
 export class DrawCommand extends Command {
 

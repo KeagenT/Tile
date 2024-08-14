@@ -1,8 +1,7 @@
-import { TileGrid } from "../Models/Grid.ts";
-import { Position } from "../Models/Position.ts";
-import { Tile } from "../Models/Tile.ts";
-import { calcBitmask } from "../Utilities/bitmask.ts";
-import { Command } from "./Command.ts";
+import { calcBitmask } from "../Utilities/mod.ts";
+
+import { Position, TileGrid, Tile } from "../Models/mod.ts";
+import { Command } from "./mod.ts";
 
 export class UpdateTileBitmaskCommand extends Command {
     private coordinates: Position;

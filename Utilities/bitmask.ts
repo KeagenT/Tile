@@ -40,3 +40,10 @@ function calcHoleBitmask(grid: TileGrid, coordinates: Position) {
     return bitmask;
 }
 
+
+export function convertBitmaskToTileSetPosition(bitmask: number, tileSetRowLength: number): Position {
+    const y = Math.floor(bitmask / tileSetRowLength);
+    const x = bitmask % tileSetRowLength;
+    return new Position(x, y);
+}
+

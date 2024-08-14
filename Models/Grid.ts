@@ -1,5 +1,4 @@
-import { Position } from "./Position.ts";
-import { HoleTile, Tile, Tiles } from "./Tile.ts";
+import { HoleTile, Tile, Position } from "./mod.ts";
 
 export class Grid<T> {
     private _grid: T[][];

@@ -1,7 +1,5 @@
-import { Position } from "../Models/Position.ts";
-import { Tile } from "../Models/Tile.ts";
-import { TileGrid } from "../Models/Grid.ts";
-import { Command } from "./Command.ts";
+import { Position, Tile, TileGrid } from "../Models/mod.ts";
+import { Command } from "./mod.ts";
 
 export class SetTileCommand extends Command {
     private coordinates: Position;

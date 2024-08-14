@@ -1,10 +1,7 @@
-import { CommandManager } from "../Commands/Command.ts";
-import { Position } from "./Position.ts";
-import { Tile } from "./Tile.ts";
-import { TileGrid } from "./Grid.ts";
-import { DrawCommand } from "../Commands/Draw.ts";
+import { Position, Tile, TileGrid } from "./mod.ts";
+import { CommandManager, DrawCommand } from "../Commands/mod.ts";
 
-abstract class Brush<T> {
+export abstract class Brush<T> {
     draw(position: Position): void {};
     updatePaint(paint: T): void {};
 }
