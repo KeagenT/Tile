@@ -1,7 +1,7 @@
 import { Position } from "./Position.ts";
 import { HoleTile, Tile, Tiles } from "./Tile.ts";
 
-class Grid<T> {
+export class Grid<T> {
     private _grid: T[][];
     private _width: number;
     private _height: number;
