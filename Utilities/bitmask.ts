@@ -4,7 +4,7 @@ import { Tiles } from "../Models/Tile.ts";
 
 export function calcBitmask(grid: TileGrid, coordinates: Position): number {
     let bitmask = 0;
-    let tile = grid.get(coordinates);
+    const tile = grid.get(coordinates);
     if(tile!.tileType === Tiles.Ground) {
         bitmask = calcGroundBitmask(grid, coordinates);
     }

@@ -1,12 +1,17 @@
-import { TileGrid } from "./Models/Grid.ts";
+import { build, emptyDir } from '@deno/dnt';
 
-export function add(a: number, b: number): number {
-  return a + b;
-}
+await emptyDir('./dist');
 
-// Learn more at https://docs.deno.com/runtime/manual/examples/module_metadata#concepts
-if (import.meta.main) {
-  const map = new TileGrid(5, 5);
-  console.log(map.toString());
-
-}
+await build({
+  entryPoints: ["./mod.ts"],
+  outDir: "./dist",
+  test: false,
+  shims: {
+    deno: true,
+  },
+  package: {
+    name: "2Dtilelib",
+    version: "0.1.0",
+    description: "2D tile manipulation library",
+  },
+});
