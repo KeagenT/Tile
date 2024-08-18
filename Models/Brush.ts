@@ -1,5 +1,6 @@
 import { Position, Tile, TileGrid } from "./mod.ts";
 import { CommandManager, DrawCommand } from "../Commands/mod.ts";
+import { clone } from "../Utilities/mod.ts";
 
 export abstract class Brush<T> {
     draw(position: Position): void {};
@@ -21,6 +22,7 @@ export class TileBrush extends Brush<Tile> {
         const drawCommand: DrawCommand = new DrawCommand({coordinates: position, grid: this.grid, tile: this.currentTile!});
         const peekCommand: DrawCommand | undefined = this.drawCommands.peek();  
         if( !peekCommand?.equals(drawCommand) ) {
+            drawCommand.tile = clone(this.currentTile!);
             this.drawCommands.execute(drawCommand);
         }
 

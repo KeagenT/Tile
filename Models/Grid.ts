@@ -1,14 +1,17 @@
-import { HoleTile, Tile, Position } from "./mod.ts";
+import { HoleTile, Tile } from "./Tile.ts";
+import { Position } from "./Position.ts";
 
 export class Grid<T> {
     private _grid: T[][];
     private _width: number;
     private _height: number;
 
-    constructor(width: number, height: number, fill: T) {
+    constructor(width: number, height: number, fillObj: () => T) {
         this._width = width;
         this._height = height;
-        this._grid = new Array(height).fill(fill).map(() => new Array(width).fill(fill));
+        this._grid = Array.from({ length: height }, () => 
+            Array.from({ length: width }, () => fillObj())
+        );
     }
 
     get width(): number {
@@ -44,7 +47,7 @@ export class Grid<T> {
 
 export class TileGrid extends Grid<Tile> {
     constructor(width: number, height: number) {
-        super(width, height, new HoleTile());
+        super(width, height, () => new HoleTile());
     }
 
     public toString(): string {

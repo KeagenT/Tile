@@ -9,10 +9,11 @@
       "jsr:@deno/emit": "jsr:@deno/emit@0.44.0",
       "jsr:@deno/graph@^0.69.7": "jsr:@deno/graph@0.69.10",
       "jsr:@deno/graph@^0.73.1": "jsr:@deno/graph@0.73.1",
-      "jsr:@std/assert@1": "jsr:@std/assert@1.0.1",
+      "jsr:@std/assert": "jsr:@std/assert@1.0.2",
       "jsr:@std/assert@^0.218.2": "jsr:@std/assert@0.218.2",
       "jsr:@std/assert@^0.223.0": "jsr:@std/assert@0.223.0",
       "jsr:@std/assert@^0.226.0": "jsr:@std/assert@0.226.0",
+      "jsr:@std/assert@^1.0.2": "jsr:@std/assert@1.0.2",
       "jsr:@std/bytes@^0.218.2": "jsr:@std/bytes@0.218.2",
       "jsr:@std/bytes@^0.223.0": "jsr:@std/bytes@0.223.0",
       "jsr:@std/fmt@1": "jsr:@std/fmt@1.0.0",
@@ -94,8 +95,8 @@
       "@std/assert@0.226.0": {
         "integrity": "0dfb5f7c7723c18cec118e080fec76ce15b4c31154b15ad2bd74822603ef75b3"
       },
-      "@std/assert@1.0.1": {
-        "integrity": "13590ef8e5854f59e4ad252fd987e83239a1bf1f16cb9c69c1d123ebb807a75b",
+      "@std/assert@1.0.2": {
+        "integrity": "ccacec332958126deaceb5c63ff8b4eaf9f5ed0eac9feccf124110435e59e49c",
         "dependencies": [
           "jsr:@std/internal@^1.0.1"
         ]
@@ -231,7 +232,7 @@
   "workspace": {
     "dependencies": [
       "jsr:@deno/dnt@^0.41.3",
-      "jsr:@std/assert@1"
+      "jsr:@std/assert@^1.0.2"
     ]
   }
 }
