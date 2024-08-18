@@ -1,5 +1,15 @@
 import { Tiles, TileGrid, Position } from "../Models/mod.ts";
 
+
+
+/**
+ * Calculates the bitmask for a given tile in a tile grid,
+ * based on the surrounding tiles and the tile type.
+ * generally detects an adjacent tile and pushes a 1 to the corresponding bit direction.
+ * @param grid - The tile grid.
+ * @param coordinates - The coordinates of the tile being bitmasked.
+ * @returns The bitmask value.
+ */
 export function calcBitmask(grid: TileGrid, coordinates: Position): number {
     let bitmask = 0;
     const tile = grid.get(coordinates);
@@ -31,7 +41,8 @@ function calcHoleBitmask(grid: TileGrid, coordinates: Position) {
     let bitmask = 16;
     if (grid.contains(coordinates.north)) {
         const northTile = grid.get(coordinates.north);
-        if (northTile!.collision) {
+        /** Use Bitmask 17 if the hole tile has ground to its north */
+        if (!northTile!.collision) {
             bitmask |= 1 << 0;
         }
     }

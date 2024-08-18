@@ -38,6 +38,10 @@ export class TileBrush extends Brush<Tile> {
     
 }
 
+/**
+ * Manages the drawing state of a tile brush, depending on input events and valid positions
+ * as well as the current tile paint.
+ */
 export class TileBrushManager {
     private brush: TileBrush;
     drawing: boolean = false;

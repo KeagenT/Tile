@@ -33,7 +33,7 @@ export class Grid<T> {
     grid(): T[][] {
         return this._grid;
     }
-
+    
     contains(p: Position): boolean {
         if(p.x < 0 || p.x >= this.width) {
             return false;
@@ -45,6 +45,12 @@ export class Grid<T> {
     }
 }
 
+
+/**
+ * Represents a grid of tiles of X width and Y height.
+ * An empty grid is initialized with empty HoleTile objects,
+ * with each cell being a unique instance.
+ */
 export class TileGrid extends Grid<Tile> {
     constructor(width: number, height: number) {
         super(width, height, () => new HoleTile());

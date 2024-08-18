@@ -1,6 +1,6 @@
 import { calcBitmask } from "../Utilities/mod.ts";
 import { Position, TileGrid, Tile } from "../Models/mod.ts";
-import { Command, CommandManager } from "./Command.ts";
+import { Command } from "./Command.ts";
 
 export class UpdateTileBitmaskCommand extends Command {
     private coordinates: Position;
@@ -32,7 +32,7 @@ export class UpdateTileBitmaskCommand extends Command {
 export class UpdateTileBitmasksCommand extends Command {
     private coordinates: Position;
     private grid: TileGrid;
-    private tileBitmaskCommands: Array<UpdateTileBitmaskCommand> = [];
+    tileBitmaskCommands: Array<UpdateTileBitmaskCommand> = [];
 
     constructor({ coordinates, grid }: { coordinates: Position, grid: TileGrid }) {
         super();
