@@ -1,3 +1,3 @@
-export * as Commands from './Commands/mod.ts';
-export * as Models from  './Models/mod.ts';
-export * as Utilities from './Utilities/mod.ts';
+export * from './Commands/mod.ts';
+export * from  './Models/mod.ts';
+export * from './Utilities/mod.ts';
