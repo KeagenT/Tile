@@ -1,5 +1,7 @@
 import { Position } from "../Models/mod.ts";
 
-export function calculateMouseEventPosition(): Position {
-    return new Position(0, 0);
+export function calculateEventPosition(tileSize: number, eventX: number, eventY: number): Position {
+    const x = Math.floor(eventX / tileSize);
+    const y = Math.floor(eventY / tileSize);
+    return new Position(x, y);
 }
