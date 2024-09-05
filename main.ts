@@ -15,7 +15,7 @@ await build({
     deno: true,
   },
   package: {
-    name: "tilelib-2D",
+    name: "tilelib-2d",
     version: "0.1.0",
     description: "2D tile manipulation library",
   },
