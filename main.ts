@@ -22,5 +22,3 @@ await build({
 });
 
 await Deno.copyFile("README.md", "./dist/README.md");
-
-

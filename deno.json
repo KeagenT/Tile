@@ -1,7 +1,12 @@
 {
   "name": "@ktc/tilelib-2d",
   "version": "0.2.1",
-  "exports": "./mod.ts",
+  "exports": {
+    ".": "./mod.ts",
+    "./Models": "./Models/mod.ts",
+    "./Commands": "./Commands/mod.ts",
+    "./Utilities": "./Utilities/mod.ts"
+  },
   "description": "Lightweight 2D Tile Manipulation Library, useful for map building, maze generation, dungeon crafting etc.",
   "tasks": {
     "build": "deno run -A main.ts"
