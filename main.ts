@@ -16,7 +16,11 @@ await build({
   },
   package: {
     name: "tilelib-2d",
-    version: "0.1.0",
-    description: "2D tile manipulation library",
+    version: "0.2.1",
+    description: "Lightweight 2D Tile Manipulation Library, useful for map building, maze generation, dungeon crafting etc.",
   },
 });
+
+await Deno.copyFile("README.md", "./dist/README.md");
+
+
