@@ -1,5 +1,5 @@
 import { assertEquals } from "jsr:@std/assert";
-import { TileGrid, Position, GroundTile, TileBrush } from "./Models/mod.ts";
+import { GroundTile, Position, TileBrush, TileGrid } from "./Models/mod.ts";
 import { Tiles } from "./mod.ts";
 Deno.test(function bitmaskTest() {
   const map = new TileGrid(3, 3);
@@ -16,5 +16,4 @@ Deno.test(function bitmaskTest() {
   assertEquals(map.get(new Position(0, 1))?.bitmask, 17);
 
   console.log(map.toString());
-
 });
